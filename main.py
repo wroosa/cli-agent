@@ -9,7 +9,7 @@ client = genai.Client(api_key=api_key)
 
 def main():
 
-    # argument parsing and error logic
+    # Argument parsing and error logic
     class MyParser(argparse.ArgumentParser):
         def error(self, message):
             sys.stderr.write(f"Error: {message}\n\n")

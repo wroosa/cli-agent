@@ -12,6 +12,9 @@ def write_file(working_directory, file_path, content):
         if not target.parent.exists():
             target.parent.mkdir(parents=True)
 
-        # Create the file and write to it
-        with target.open("w") as f:
-            f.write(content)
+    # Create the file and write to it
+    with target.open("w") as f:
+        f.write(content)
+    
+    return f'Successfully wrote to "{file_path}" ({len(content)} characters written)'
+

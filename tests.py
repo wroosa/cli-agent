@@ -1,8 +1,8 @@
-from functions.write_file import write_file
+from functions.run_python_file import run_python_file
 
-def show(title, wd, dir_, cont):
+def show(title, wd, dir_, cont=[]):
     print(title)
-    result = write_file(wd, dir_, cont)
+    result = run_python_file(wd, dir_, cont)
 
     # indent each line appropriately
     indent = "    " if result.startswith("Error:") else " "
@@ -15,7 +15,13 @@ if __name__ == "__main__":
     # show("Result for '/bin/cat' directory:", "calculator", "/bin/cat")
     # show("Result for pkg/does_not_exist.py", "calculator", "pkg/does_not_exist.py")
 
-    show("Result for lorem.txt", "calculator", "lorem.txt", "wait, this isn't lorem ipsum")
+    # show("Result for lorem.txt", "calculator", "lorem.txt", "wait, this isn't lorem ipsum")
     # show("Result for pkg/morelorem.txt:", "calculator", "pkg/morelorem.txt", "lorem ipsum dolor sit amet")
     # show("Result for /tmp/temp.txt:", "calculator", "/tmp/temp.txt", "this should not be allowed")
+
+    show("Result for main.py w/o args", "calculator", "main.py")
+    show("Result for main.py with args", "calculator", "main.py", ["3 + 5"])
+    show("Result for tests.py", "calculator", "tests.py")
+    show("Result for outside of WD", "calculator", "../main.py") 
+    show("Result for non existent", "calculator", "nonexistent.py")
 

@@ -6,10 +6,10 @@ def run_python_file(working_directory, file_path, args=[]):
     target = Path(working_directory / Path(file_path)).resolve()
 
     if base not in target.parents and base != target:
-        return f"Error: Cannot execute '{file_path}' as it is outside the permitted working directory"
+        return f'Error: Cannot execute "{file_path}" as it is outside the permitted working directory'
     
     if not target.exists():
-        return f"Error: File '{file_path}' not found."
+        return f'Error: File "{file_path}" not found.'
     
     if not target.name.endswith(".py"):
         return f'Error: "{file_path}" is not a Python file.'

@@ -48,7 +48,7 @@ schema_run_python_file = types.FunctionDeclaration(
             ),
             "args": types.Schema(
                 type=types.Type.ARRAY,
-                description="The list of arguments to be passed when executing the python file found at the file_path. If none are provided then no arguments will be passed to the execution of the python file",
+                description="An optional list of arguments to be passed when executing the python file found at the file_path. If no list is provided it will default to an empty list which is no arguments",
                 items=types.Schema(type=types.Type.STRING)
             )
         },

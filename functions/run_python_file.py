@@ -26,7 +26,7 @@ def run_python_file(working_directory, file_path, args=[]):
     except Exception as e:
         return f"Error: executing Python file: {e}"
 
-    if result.stdout.strip() == '':
+    if result.stdout.strip() == '' and result.stderr.strip() == '':
         return "No output produced"
     
     code = ""

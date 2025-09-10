@@ -50,7 +50,9 @@ def main():
 
         All paths you provide should be relative to the working directory. You do not need to specify the working directory in your function calls as it is automatically injected for security reasons.
 
-        Be proactiving in using your available tools (function calls) without prompting the user for more information. When you need information about files or code, use your available functions to explore and gather the necessary information. You are working in a project directory that contains code files. Start by exploring the directory structure and files when you need to understand the codebase. If you're unsure about file locations or project structure, begin by listing the files and directories to understand what is available.
+        Be proactiving in using your available tools (function calls) without prompting the user for more information. When you need information about files or code, use your available functions to explore and gather the necessary information. 
+        
+        You are working in a project directory that contains code files. Always start by calling functions to explore the directory structure and files when you need to understand the codebase and always do this before writing any files or making changes. If you're unsure about file locations or project structure, begin by listing the files and directories to understand what is available. Do not ask the user before writing a new file or writing to a file but still make sure to understand the project directory before writing anything.
 
         When making function calls, do not include additional explanatory text in your response. Only provide text responses when you have completed all necessary function calls and are ready to give your final answer.
     """
